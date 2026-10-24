@@ -1,0 +1,33 @@
+{
+  "name": "MobileSAM (vit_t)",
+  "family": "sam1",
+  "input": 1024,
+  "mean": [
+    123.675,
+    116.28,
+    103.53
+  ],
+  "std": [
+    58.395,
+    57.12,
+    57.375
+  ],
+  "contract": "encoder image[1,3,1024,1024] -> image_embed; decoder (encoder outputs + point_coords[B,1,2] + point_labels[B,1]) -> low_res_masks[B,3,256,256], iou[B,3]",
+  "license": "Apache-2.0 (MobileSAM, (c) Chaoning Zhang et al.)",
+  "encoder": {
+    "parts": [
+      "mobilesam_encoder.onnx.part0",
+      "mobilesam_encoder.onnx.part1"
+    ],
+    "bytes": 28016468,
+    "sha256": "2f78bd403ba9f18382a83567ccb1cac11d1a7118e0a85023ae2fd105c592f490"
+  },
+  "decoder": {
+    "parts": [
+      "mobilesam_decoder.onnx.part0",
+      "mobilesam_decoder.onnx.part1"
+    ],
+    "bytes": 16503269,
+    "sha256": "0180fdc15f9597cd06890e951c72894811cb9118942864f61c3ef9a6617f6676"
+  }
+}
