@@ -1,0 +1,41 @@
+{
+  "name": "sam2.1_tiny",
+  "family": "sam2",
+  "input": 1024,
+  "mean": [
+    123.675,
+    116.28,
+    103.53
+  ],
+  "std": [
+    58.395,
+    57.12,
+    57.375
+  ],
+  "contract": "see export_sam2.py",
+  "license": "Apache-2.0 (SAM 2, (c) Meta Platforms, Inc.)",
+  "checkpoint": "sam2.1_hiera_tiny.pt",
+  "encoder": {
+    "parts": [
+      "sam2_encoder.onnx.part0",
+      "sam2_encoder.onnx.part1",
+      "sam2_encoder.onnx.part2",
+      "sam2_encoder.onnx.part3",
+      "sam2_encoder.onnx.part4",
+      "sam2_encoder.onnx.part5",
+      "sam2_encoder.onnx.part6",
+      "sam2_encoder.onnx.part7",
+      "sam2_encoder.onnx.part8"
+    ],
+    "bytes": 134419701,
+    "sha256": "dc3886fdd8f077669c3fb9f9645da39f89644c9168adf66f0edc275e511d3ea8"
+  },
+  "decoder": {
+    "parts": [
+      "sam2_decoder.onnx.part0",
+      "sam2_decoder.onnx.part1"
+    ],
+    "bytes": 16535009,
+    "sha256": "44efd2f997bcfd2b421037ac9c52b78096ab4930d6e7cd80e2c3609fe5bb6b6c"
+  }
+}
